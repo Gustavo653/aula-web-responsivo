@@ -9,6 +9,27 @@ document.getElementById("btnEnviar").addEventListener("click", function(event) {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const menuOpcoes = document.querySelector(".menu-opcoes");
+
+    menuHamburger.addEventListener("click", function () {
+        if (menuOpcoes.style.display === "flex") {
+            menuOpcoes.style.display = "none";
+        } else {
+            menuOpcoes.style.display = "flex";
+            menuOpcoes.style.flexDirection = "column";
+            menuOpcoes.style.position = "absolute";
+            menuOpcoes.style.top = "80px";
+            menuOpcoes.style.right = "20px";
+            menuOpcoes.style.backgroundColor = "#fac270";
+            menuOpcoes.style.padding = "10px";
+            menuOpcoes.style.borderRadius = "8px";
+            menuOpcoes.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+        }
+    });
+});
+
 function getInputValue(inputId) {
     return document.getElementById(inputId).value;
 }
